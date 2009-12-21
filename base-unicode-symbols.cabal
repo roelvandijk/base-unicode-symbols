@@ -21,7 +21,11 @@ description:
   information regarding their Unicode code point. They should be
   completely interchangeable with their definitions.
 
-Library
+source-repository head
+  type:     darcs
+  location: http://code.haskell.org/~roelvandijk/code/base-unicode-symbols
+
+library
   exposed-modules: Control.Applicative.Unicode
                  , Control.Category.Unicode
                  , Data.Monoid.Unicode
