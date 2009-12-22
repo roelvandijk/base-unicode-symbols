@@ -1,16 +1,19 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE UnicodeSyntax #-}
 
-module Control.Category.Unicode ( (∘) ) where
+module Data.Foldable.Unicode where
 
-import Control.Category ( Category, (.) )
+import Data.Bool     ( Bool )
+import Data.Eq       ( Eq )
+import Data.Foldable ( Foldable, elem, notElem )
 
 
 -------------------------------------------------------------------------------
 -- Fixities
 -------------------------------------------------------------------------------
 
-infixr 9 ∘
+infix  4 ∈
+infix  4 ∉
 
 
 -------------------------------------------------------------------------------
@@ -18,10 +21,17 @@ infixr 9 ∘
 -------------------------------------------------------------------------------
 
 {- |
-(&#x2218;) = ('.')
+(&#x2208;) = 'elem'
 
-U+2218, RING OPERATOR
+U+2208, ELEMENT OF
 -}
-(∘) ∷ Category cat ⇒ cat b c → cat a b → cat a c
-(∘) = (.)
+(∈) ∷ (Foldable t, Eq α) ⇒ α → t α → Bool
+(∈) = elem
 
+{- |
+(&#x2209;) = 'notElem'
+
+U+2209, NOT AN ELEMENT OF
+-}
+(∉) ∷ (Foldable t, Eq α) ⇒ α → t α → Bool
+(∉) = notElem

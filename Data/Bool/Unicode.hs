@@ -1,16 +1,17 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE UnicodeSyntax #-}
 
-module Control.Category.Unicode ( (∘) ) where
+module Data.Bool.Unicode ( (∧), (∨), (¬) ) where
 
-import Control.Category ( Category, (.) )
+import Data.Bool ( Bool, (&&), (||), not )
 
 
 -------------------------------------------------------------------------------
 -- Fixities
 -------------------------------------------------------------------------------
 
-infixr 9 ∘
+infixr 2 ∨
+infixr 3 ∧
 
 
 -------------------------------------------------------------------------------
@@ -18,10 +19,25 @@ infixr 9 ∘
 -------------------------------------------------------------------------------
 
 {- |
-(&#x2218;) = ('.')
+(&#x00AC;) = 'not'
 
-U+2218, RING OPERATOR
+U+00AC, NOT SIGN
 -}
-(∘) ∷ Category cat ⇒ cat b c → cat a b → cat a c
-(∘) = (.)
+(¬) ∷ Bool → Bool
+(¬) = not
 
+{- |
+(&#x2227;) = ('&&')
+
+U+2227, LOGICAL AND
+-}
+(∧) ∷ Bool → Bool → Bool
+(∧) = (&&)
+
+{- |
+(&#x2228;) = ('||')
+
+U+2228, LOGICAL OR
+-}
+(∨) ∷ Bool → Bool → Bool
+(∨) = (||)

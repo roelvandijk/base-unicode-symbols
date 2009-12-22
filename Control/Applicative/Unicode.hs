@@ -1,15 +1,23 @@
+{-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE UnicodeSyntax #-}
 
-module Control.Applicative.Unicode
-    ( (⊛)
-    , (∅)
-    ) where
+module Control.Applicative.Unicode ( (⊛), (∅) ) where
 
-import Control.Applicative ( Applicative
-                           , Alternative
-                           , (<*>)
-                           , empty
+import Control.Applicative ( Applicative, Alternative
+                           , (<*>), empty
                            )
+
+
+-------------------------------------------------------------------------------
+-- Fixities
+-------------------------------------------------------------------------------
+
+infixl 4 ⊛
+
+
+-------------------------------------------------------------------------------
+-- Symbols
+-------------------------------------------------------------------------------
 
 {- |
 (&#x229B;) = '<*>'

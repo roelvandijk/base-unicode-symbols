@@ -1,16 +1,18 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE UnicodeSyntax #-}
 
-module Control.Category.Unicode ( (∘) ) where
+module Data.Eq.Unicode ( (≡), (≢) ) where
 
-import Control.Category ( Category, (.) )
+import Data.Bool ( Bool )
+import Data.Eq   ( Eq, (==), (/=) )
 
 
 -------------------------------------------------------------------------------
 -- Fixities
 -------------------------------------------------------------------------------
 
-infixr 9 ∘
+infix  4 ≡
+infix  4 ≢
 
 
 -------------------------------------------------------------------------------
@@ -18,10 +20,17 @@ infixr 9 ∘
 -------------------------------------------------------------------------------
 
 {- |
-(&#x2218;) = ('.')
+(&#x2261;) = ('==')
 
-U+2218, RING OPERATOR
+U+2261, IDENTICAL TO
 -}
-(∘) ∷ Category cat ⇒ cat b c → cat a b → cat a c
-(∘) = (.)
+(≡) ∷ Eq α ⇒ α → α → Bool
+(≡) = (==)
 
+{- |
+(&#x2262;) = ('/=')
+
+U+2262, NOT IDENTICAL TO
+-}
+(≢) ∷ Eq α ⇒ α → α → Bool
+(≢) = (/=)
