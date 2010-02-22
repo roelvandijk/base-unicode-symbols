@@ -3,23 +3,22 @@ version:       0.1.2
 cabal-version: >=1.6
 build-type:    Simple
 stability:     experimental
-author:        Roel van Dijk
-maintainer:    vandijk.roel@gmail.com
-copyright:     (c) 2009 Roel van Dijk
+author:        Roel van Dijk <vandijk.roel@gmail.com>
+maintainer:    Roel van Dijk <vandijk.roel@gmail.com>
+copyright:     (c) 2009 Roel van Dijk <vandijk.roel@gmail.com>
 license:       BSD3
 license-file:  LICENSE
 category:
 synopsis:      Unicode alternatives for common functions and operators
 description:
-
   This package defines new symbols for a number of functions and
   operators in the base package.
-
   .
-
   All symbols are documented with their actual definition and
   information regarding their Unicode code point. They should be
   completely interchangeable with their definitions.
+  .
+  Original idea by P&#xE9;ter Divi&#xE1;nszky.
 
 source-repository head
   type:     darcs
