@@ -18,7 +18,26 @@ description:
   information regarding their Unicode code point. They should be
   completely interchangeable with their definitions.
   .
+  For further Unicode goodness you can enable the @UnicodeSyntax@
+  language extension \[1\]. This extension enables Unicode characters
+  to be used to stand for certain ASCII character sequences. For GHC
+  6.12.1 it enables the following synonyms:
+  .
+  * ::, &#x2237; (U+2237, PROPORTION)
+  .
+  * =>, &#x21D2; (U+21D2, RIGHTWARDS DOUBLE ARROW)
+  .
+  * forall, &#x2200; (U+2200, FOR ALL)
+  .
+  * ->, &#x2192; (U+2192, RIGHTWARDS ARROW)
+  .
+  * <-, &#x2190; (U+2190, LEFTWARDS ARROW)
+  .
+  * .., &#x22EF; (U+22EF, MIDLINE HORIZONTAL ELLIPSIS)
+  .
   Original idea by P&#xE9;ter Divi&#xE1;nszky.
+  .
+  \[1\] <http://www.haskell.org/ghc/docs/latest/html/users_guide/syntax-extns.html#unicode-syntax>
 
 source-repository head
   type:     darcs
