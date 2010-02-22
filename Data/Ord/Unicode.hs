@@ -21,7 +21,7 @@ infix  4 ≯
 -- Symbols
 -------------------------------------------------------------------------------
 
-{- |
+{-|
 (&#x2264;) = ('<=')
 
 U+2264, LESS-THAN OR EQUAL TO
@@ -29,7 +29,7 @@ U+2264, LESS-THAN OR EQUAL TO
 (≤) ∷ Ord α ⇒ α → α → Bool
 (≤) = (<=)
 
-{- |
+{-|
 (&#x2265;) = ('>=')
 
 U+2265, GREATER-THAN OR EQUAL TO
@@ -37,7 +37,7 @@ U+2265, GREATER-THAN OR EQUAL TO
 (≥) ∷ Ord α ⇒ α → α → Bool
 (≥) = (>=)
 
-{- |
+{-|
 (&#x226E;) = ('>=')
 
 U+226E, NOT LESS-THAN
@@ -45,7 +45,7 @@ U+226E, NOT LESS-THAN
 (≮) ∷ Ord α ⇒ α → α → Bool
 (≮) = (>=)
 
-{- |
+{-|
 (&#x226F;) = ('<=')
 
 U+226F, NOT GREATER-THAN

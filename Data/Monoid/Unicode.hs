@@ -1,9 +1,9 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE UnicodeSyntax #-}
 
-module Data.Monoid.Unicode 
+module Data.Monoid.Unicode
     ( (∅)
-    , (⊕) 
+    , (⊕)
     ) where
 
 import Data.Monoid ( Monoid, mempty, mappend )
@@ -20,7 +20,7 @@ infixr 6 ⊕
 -- Symbols
 -------------------------------------------------------------------------------
 
-{- |
+{-|
 (&#x2205;) = 'mempty'
 
 U+2205, EMPTY SET
@@ -28,7 +28,7 @@ U+2205, EMPTY SET
 (∅) ∷ Monoid α ⇒ α
 (∅) = mempty
 
-{- |
+{-|
 (&#x2295;) = 'mappend'
 
 U+2295, CIRCLED PLUS
