@@ -1,5 +1,11 @@
-{-# LANGUAGE NoImplicitPrelude #-}
-{-# LANGUAGE UnicodeSyntax #-}
+{-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
+
+{-|
+Module     : Prelude.Unicode
+Copyright  : (c) 2009–2010 Roel van Dijk
+License    : BSD3 (see the file LICENSE)
+Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
+-}
 
 module Prelude.Unicode
     ( (¬), (∧), (∨)
@@ -13,15 +19,22 @@ module Prelude.Unicode
     , (⊥)
     ) where
 
+
+-------------------------------------------------------------------------------
+-- Imports
+-------------------------------------------------------------------------------
+
+-- from base:
+import Prelude ( Num, Floating, Fractional
+               , (/), (*), pi, undefined
+               )
+
+-- from base-unicode-symbols:
 import Data.Bool.Unicode     ( (∧), (∨), (¬) )
 import Data.Eq.Unicode       ( (≡), (≢) )
 import Data.Function.Unicode ( (∘) )
 import Data.List.Unicode     ( (⧺), (∈), (∉) )
 import Data.Ord.Unicode      ( (≤), (≥), (≮), (≯) )
-
-import Prelude ( Num, Floating, Fractional
-               , (/), (*), pi, undefined
-               )
 
 
 -------------------------------------------------------------------------------

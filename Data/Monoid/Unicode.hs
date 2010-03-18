@@ -1,11 +1,20 @@
-{-# LANGUAGE NoImplicitPrelude #-}
-{-# LANGUAGE UnicodeSyntax #-}
+{-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
 
-module Data.Monoid.Unicode
-    ( (∅)
-    , (⊕)
-    ) where
+{-|
+Module     : Data.Monoid.Unicode
+Copyright  : (c) 2009–2010 Roel van Dijk
+License    : BSD3 (see the file LICENSE)
+Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
+-}
 
+module Data.Monoid.Unicode ( (∅), (⊕) ) where
+
+
+-------------------------------------------------------------------------------
+-- Imports
+-------------------------------------------------------------------------------
+
+-- from base:
 import Data.Monoid ( Monoid, mempty, mappend )
 
 

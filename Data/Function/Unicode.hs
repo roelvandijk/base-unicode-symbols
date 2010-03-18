@@ -1,8 +1,20 @@
-{-# LANGUAGE NoImplicitPrelude #-}
-{-# LANGUAGE UnicodeSyntax #-}
+{-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
+
+{-|
+Module     : Data.Function.Unicode
+Copyright  : (c) 2009–2010 Roel van Dijk
+License    : BSD3 (see the file LICENSE)
+Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
+-}
 
 module Data.Function.Unicode ( (∘) ) where
 
+
+-------------------------------------------------------------------------------
+-- Imports
+-------------------------------------------------------------------------------
+
+-- from base:
 import Data.Function ( (.) )
 
 
@@ -22,5 +34,5 @@ infixr 9 ∘
 
 U+2218, RING OPERATOR
 -}
-(∘) ∷ (b → c) → (a → b) → (a → c)
+(∘) ∷ (β → γ) → (α → β) → (α → γ)
 (∘) = (.)

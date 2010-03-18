@@ -1,11 +1,21 @@
-{-# LANGUAGE NoImplicitPrelude #-}
-{-# LANGUAGE UnicodeSyntax #-}
+{-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
+
+{-|
+Module     : Control.Applicative.Unicode
+Copyright  : (c) 2009–2010 Roel van Dijk
+License    : BSD3 (see the file LICENSE)
+Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
+-}
 
 module Control.Applicative.Unicode ( (⊛), (∅) ) where
 
-import Control.Applicative ( Applicative, Alternative
-                           , (<*>), empty
-                           )
+
+-------------------------------------------------------------------------------
+-- Imports
+-------------------------------------------------------------------------------
+
+-- from base:
+import Control.Applicative ( Applicative, Alternative, (<*>), empty )
 
 
 -------------------------------------------------------------------------------
