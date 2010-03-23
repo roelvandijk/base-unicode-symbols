@@ -1,5 +1,5 @@
 name:          base-unicode-symbols
-version:       0.1.2.1
+version:       0.1.2.2
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
@@ -9,6 +9,7 @@ copyright:     (c) 2009–2010 Roel van Dijk <vandijk.roel@gmail.com>
 license:       BSD3
 license-file:  LICENSE
 category:
+homepage:      http://haskell.org/haskellwiki/Unicode-symbols
 synopsis:      Unicode alternatives for common functions and operators
 description:
   This package defines new symbols for a number of functions and
