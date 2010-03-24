@@ -1,13 +1,13 @@
 {-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
 
 {-|
-Module     : Control.Category.Unicode
-Copyright  : (c) 2009–2010 Roel van Dijk
+Module     : Control.Monad.Unicode
+Copyright  : (c) 2010 Roel van Dijk
 License    : BSD3 (see the file LICENSE)
 Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 -}
 
-module Control.Category.Unicode ( (∘), (⋙), (⋘) ) where
+module Control.Monad.Unicode ( (≫=), (≫), (=≪) ) where
 
 
 -------------------------------------------------------------------------------
@@ -15,15 +15,16 @@ module Control.Category.Unicode ( (∘), (⋙), (⋘) ) where
 -------------------------------------------------------------------------------
 
 -- from base:
-import Control.Category ( Category, (.), (>>>), (<<<) )
+import Control.Monad ( Monad, (>>=), (>>), (=<<) )
 
 
 -------------------------------------------------------------------------------
 -- Fixities
 -------------------------------------------------------------------------------
 
-infixr 9 ∘
-infixr 1 ⋙, ⋘
+infixl 1 ≫=
+infixl 1 ≫
+infixr 1 =≪
 
 
 -------------------------------------------------------------------------------
@@ -31,25 +32,25 @@ infixr 1 ⋙, ⋘
 -------------------------------------------------------------------------------
 
 {-|
-(&#x2218;) = ('.')
+(&#x226B;=) = ('>>=')
 
-U+2218, RING OPERATOR
+(U+226B, MUCH GREATER-THAN) + (U+3D, EQUALS SIGN)
 -}
-(∘) ∷ Category cat ⇒ cat β γ → cat α β → cat α γ
-(∘) = (.)
+(≫=) ∷ Monad m ⇒ m α → (α → m β) → m β
+(≫=) = (>>=)
 
 {-|
-(&#x22D9;) = ('>>>')
+(&#x226B;) = ('>>')
 
-U+22D9, VERY MUCH GREATER-THAN
+U+226B, MUCH GREATER-THAN
 -}
-(⋙) ∷ Category cat ⇒ cat α β → cat β γ → cat α γ
-(⋙) = (>>>)
+(≫) ∷ Monad m ⇒ m α → m β → m β
+(≫) = (>>)
 
 {-|
-(&#x22D8;) = ('<<<')
+(=&#x226A;) = ('=<<')
 
-U+22D8, VERY MUCH LESS-THAN
+(U+3D, EQUALS SIGN) + (U+226A, MUCH LESS-THAN)
 -}
-(⋘) ∷ Category cat ⇒ cat β γ → cat α β → cat α γ
-(⋘) = (<<<)
+(=≪) ∷ Monad m ⇒ (α → m β) → m α → m β
+(=≪) = (=<<)

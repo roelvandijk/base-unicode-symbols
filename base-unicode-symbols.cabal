@@ -1,5 +1,5 @@
 name:          base-unicode-symbols
-version:       0.1.2.2
+version:       0.1.3
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
@@ -46,7 +46,9 @@ source-repository head
 
 library
   exposed-modules: Control.Applicative.Unicode
+                 , Control.Arrow.Unicode
                  , Control.Category.Unicode
+                 , Control.Monad.Unicode
                  , Data.Bool.Unicode
                  , Data.Eq.Unicode
                  , Data.Foldable.Unicode

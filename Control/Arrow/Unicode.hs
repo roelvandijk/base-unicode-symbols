@@ -1,13 +1,13 @@
 {-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
 
 {-|
-Module     : Control.Category.Unicode
-Copyright  : (c) 2009–2010 Roel van Dijk
+Module     : Control.Arrow.Unicode
+Copyright  : (c) 2010 Roel van Dijk
 License    : BSD3 (see the file LICENSE)
 Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 -}
 
-module Control.Category.Unicode ( (∘), (⋙), (⋘) ) where
+module Control.Arrow.Unicode ( (⋙), (⋘), (⧻), (⫴) ) where
 
 
 -------------------------------------------------------------------------------
@@ -15,41 +15,38 @@ module Control.Category.Unicode ( (∘), (⋙), (⋘) ) where
 -------------------------------------------------------------------------------
 
 -- from base:
-import Control.Category ( Category, (.), (>>>), (<<<) )
+import Control.Arrow ( ArrowChoice, (+++), (|||) )
+import Data.Either   ( Either )
+
+-- from base-unicode-symbols
+import Control.Category.Unicode ( (⋙), (⋘) )
 
 
 -------------------------------------------------------------------------------
 -- Fixities
 -------------------------------------------------------------------------------
 
-infixr 9 ∘
-infixr 1 ⋙, ⋘
+infixr 2 ⧻
+infixr 2 ⫴
 
 
 -------------------------------------------------------------------------------
 -- Symbols
 -------------------------------------------------------------------------------
 
-{-|
-(&#x2218;) = ('.')
-
-U+2218, RING OPERATOR
--}
-(∘) ∷ Category cat ⇒ cat β γ → cat α β → cat α γ
-(∘) = (.)
 
 {-|
-(&#x22D9;) = ('>>>')
+(&#x29FB;) = ('+++')
 
-U+22D9, VERY MUCH GREATER-THAN
+U+29FB, TRIPLE PLUS
 -}
-(⋙) ∷ Category cat ⇒ cat α β → cat β γ → cat α γ
-(⋙) = (>>>)
+(⧻) ∷ ArrowChoice α ⇒ α β γ → α β' γ' → α (Either β β') (Either γ γ')
+(⧻) = (+++)
 
 {-|
-(&#x22D8;) = ('<<<')
+(&#x2AF4;) = ('|||')
 
-U+22D8, VERY MUCH LESS-THAN
+U+2AF4, TRIPLE VERTICAL BAR BINARY RELATION
 -}
-(⋘) ∷ Category cat ⇒ cat β γ → cat α β → cat α γ
-(⋘) = (<<<)
+(⫴) ∷ ArrowChoice α ⇒ α β δ → α γ δ → α (Either β γ) δ
+(⫴) = (|||)
