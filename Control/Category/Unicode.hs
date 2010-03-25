@@ -1,4 +1,4 @@
-{-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
+{-# LANGUAGE NoImplicitPrelude, UnicodeSyntax, TypeOperators #-}
 
 {-|
 Module     : Control.Category.Unicode
@@ -35,7 +35,7 @@ infixr 1 ⋙, ⋘
 
 U+2218, RING OPERATOR
 -}
-(∘) ∷ Category cat ⇒ cat β γ → cat α β → cat α γ
+(∘) ∷ Category (⇝) ⇒ (β ⇝ γ) → (α ⇝ β) → (α ⇝ γ)
 (∘) = (.)
 
 {-|
@@ -43,7 +43,7 @@ U+2218, RING OPERATOR
 
 U+22D9, VERY MUCH GREATER-THAN
 -}
-(⋙) ∷ Category cat ⇒ cat α β → cat β γ → cat α γ
+(⋙) ∷ Category (⇝) ⇒ (α ⇝ β) → (β ⇝ γ) → (α ⇝ γ)
 (⋙) = (>>>)
 
 {-|
@@ -51,5 +51,5 @@ U+22D9, VERY MUCH GREATER-THAN
 
 U+22D8, VERY MUCH LESS-THAN
 -}
-(⋘) ∷ Category cat ⇒ cat β γ → cat α β → cat α γ
+(⋘) ∷ Category (⇝) ⇒ (β ⇝ γ) → (α ⇝ β) → (α ⇝ γ)
 (⋘) = (<<<)

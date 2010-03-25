@@ -1,4 +1,4 @@
-{-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
+{-# LANGUAGE NoImplicitPrelude, UnicodeSyntax, TypeOperators #-}
 
 {-|
 Module     : Control.Arrow.Unicode
@@ -40,7 +40,7 @@ infixr 2 ⫴
 
 U+29FB, TRIPLE PLUS
 -}
-(⧻) ∷ ArrowChoice α ⇒ α β γ → α β' γ' → α (Either β β') (Either γ γ')
+(⧻) ∷ ArrowChoice (⇝) ⇒ (α ⇝ β) → (α' ⇝ β') → (Either α α' ⇝ Either β β')
 (⧻) = (+++)
 
 {-|
@@ -48,5 +48,5 @@ U+29FB, TRIPLE PLUS
 
 U+2AF4, TRIPLE VERTICAL BAR BINARY RELATION
 -}
-(⫴) ∷ ArrowChoice α ⇒ α β δ → α γ δ → α (Either β γ) δ
+(⫴) ∷ ArrowChoice (⇝) ⇒ (α ⇝ δ) → (β ⇝ δ) → (Either α β ⇝ δ)
 (⫴) = (|||)
