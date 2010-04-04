@@ -7,7 +7,7 @@ License    : BSD3 (see the file LICENSE)
 Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 -}
 
-module Data.Eq.Unicode ( (≡), (≢) ) where
+module Data.Eq.Unicode ( (≡), (≢), (≠) ) where
 
 
 -------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ import Data.Eq   ( Eq, (==), (/=) )
 
 infix  4 ≡
 infix  4 ≢
-
+infix  4 ≠
 
 -------------------------------------------------------------------------------
 -- Symbols
@@ -46,3 +46,11 @@ U+2262, NOT IDENTICAL TO
 -}
 (≢) ∷ Eq α ⇒ α → α → Bool
 (≢) = (/=)
+
+{-|
+(&#x2260;) = ('/=')
+
+U+2260, NOT EQUAL TO
+-}
+(≠) ∷ Eq α ⇒ α → α → Bool
+(≠) = (/=)

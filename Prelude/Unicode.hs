@@ -9,7 +9,7 @@ Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 
 module Prelude.Unicode
     ( (¬), (∧), (∨)
-    , (≡), (≢)
+    , (≡), (≢), (≠)
     , (≤), (≥), (≮), (≯)
     , π
     , (÷), (⋅)
@@ -31,7 +31,7 @@ import Prelude ( Num, Floating, Fractional
 
 -- from base-unicode-symbols:
 import Data.Bool.Unicode     ( (∧), (∨), (¬) )
-import Data.Eq.Unicode       ( (≡), (≢) )
+import Data.Eq.Unicode       ( (≡), (≢), (≠) )
 import Data.Function.Unicode ( (∘) )
 import Data.List.Unicode     ( (⧺), (∈), (∉) )
 import Data.Ord.Unicode      ( (≤), (≥), (≮), (≯) )
