@@ -17,6 +17,7 @@ module Data.Foldable.Unicode where
 -- from base:
 import Data.Bool     ( Bool )
 import Data.Eq       ( Eq )
+import Data.Function ( flip )
 import Data.Foldable ( Foldable, elem, notElem )
 
 
@@ -25,7 +26,9 @@ import Data.Foldable ( Foldable, elem, notElem )
 -------------------------------------------------------------------------------
 
 infix  4 ∈
+infix  4 ∋
 infix  4 ∉
+infix  4 ∌
 
 
 -------------------------------------------------------------------------------
@@ -41,9 +44,25 @@ U+2208, ELEMENT OF
 (∈) = elem
 
 {- |
+(&#x220B;) = 'flip' (&#x2208;)
+
+U+220B, CONTAINS AS MEMBER
+-}
+(∋) ∷ (Foldable t, Eq α) ⇒ t α → α → Bool
+(∋) = flip (∈)
+
+{- |
 (&#x2209;) = 'notElem'
 
 U+2209, NOT AN ELEMENT OF
 -}
 (∉) ∷ (Foldable t, Eq α) ⇒ α → t α → Bool
 (∉) = notElem
+
+{- |
+(&#x220C;) = 'flip' (&#x2209;)
+
+U+220C, DOES NOT CONTAIN AS MEMBER
+-}
+(∌) ∷ (Foldable t, Eq α) ⇒ t α → α → Bool
+(∌) = flip (∉)

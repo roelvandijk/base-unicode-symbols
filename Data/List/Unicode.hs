@@ -7,7 +7,7 @@ License    : BSD3 (see the file LICENSE)
 Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 -}
 
-module Data.List.Unicode ( (⧺), (∈), (∉), (∪), (∩) ) where
+module Data.List.Unicode ( (⧺), (∈), (∋), (∉), (∌), (∪), (∩) ) where
 
 
 -------------------------------------------------------------------------------
@@ -15,9 +15,10 @@ module Data.List.Unicode ( (⧺), (∈), (∉), (∪), (∩) ) where
 -------------------------------------------------------------------------------
 
 -- from base:
-import Data.Bool ( Bool )
-import Data.Eq   ( Eq )
-import Data.List ( (++), elem, notElem, union, intersect )
+import Data.Bool     ( Bool )
+import Data.Eq       ( Eq )
+import Data.Function ( flip )
+import Data.List     ( (++), elem, notElem, union, intersect )
 
 
 -------------------------------------------------------------------------------
@@ -25,7 +26,9 @@ import Data.List ( (++), elem, notElem, union, intersect )
 -------------------------------------------------------------------------------
 
 infix  4 ∈
+infix  4 ∋
 infix  4 ∉
+infix  4 ∌
 infixr 5 ⧺
 
 
@@ -49,6 +52,14 @@ U+2208, ELEMENT OF
 (∈) ∷ Eq α ⇒ α → [α] → Bool
 (∈) = elem
 
+{- |
+(&#x220B;) = 'flip' (&#x2208;)
+
+U+220B, CONTAINS AS MEMBER
+-}
+(∋) ∷ Eq α ⇒ [α] → α → Bool
+(∋) = flip (∈)
+
 {-|
 (&#x2209;) = 'notElem'
 
@@ -56,6 +67,14 @@ U+2209, NOT AN ELEMENT OF
 -}
 (∉) ∷ Eq α ⇒ α → [α] → Bool
 (∉) = notElem
+
+{- |
+(&#x220C;) = 'flip' (&#x2209;)
+
+U+220C, DOES NOT CONTAIN AS MEMBER
+-}
+(∌) ∷ Eq α ⇒ [α] → α → Bool
+(∌) = flip (∉)
 
 {-|
 (&#x222A;) = 'union'
