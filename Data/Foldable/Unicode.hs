@@ -35,7 +35,7 @@ infix  4 ∌
 -- Symbols
 -------------------------------------------------------------------------------
 
-{- |
+{-|
 (&#x2208;) = 'elem'
 
 U+2208, ELEMENT OF
@@ -43,7 +43,7 @@ U+2208, ELEMENT OF
 (∈) ∷ (Foldable t, Eq α) ⇒ α → t α → Bool
 (∈) = elem
 
-{- |
+{-|
 (&#x220B;) = 'flip' (&#x2208;)
 
 U+220B, CONTAINS AS MEMBER
@@ -51,7 +51,7 @@ U+220B, CONTAINS AS MEMBER
 (∋) ∷ (Foldable t, Eq α) ⇒ t α → α → Bool
 (∋) = flip (∈)
 
-{- |
+{-|
 (&#x2209;) = 'notElem'
 
 U+2209, NOT AN ELEMENT OF
@@ -59,7 +59,7 @@ U+2209, NOT AN ELEMENT OF
 (∉) ∷ (Foldable t, Eq α) ⇒ α → t α → Bool
 (∉) = notElem
 
-{- |
+{-|
 (&#x220C;) = 'flip' (&#x2209;)
 
 U+220C, DOES NOT CONTAIN AS MEMBER
