@@ -1,5 +1,5 @@
 name:          base-unicode-symbols
-version:       0.2
+version:       0.2.0.1
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
@@ -33,8 +33,6 @@ description:
   * &#x2192; (U+2192, RIGHTWARDS ARROW) instead of @->@
   .
   * &#x2190; (U+2190, LEFTWARDS ARROW) instead of @<-@
-  .
-  * &#x22EF; (U+22EF, MIDLINE HORIZONTAL ELLIPSIS) instead of @..@
   .
   Original idea by P&#xE9;ter Divi&#xE1;nszky.
   .
