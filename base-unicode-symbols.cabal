@@ -1,5 +1,5 @@
 name:          base-unicode-symbols
-version:       0.2.0.1
+version:       0.2.1
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
@@ -22,7 +22,7 @@ description:
   For further Unicode goodness you can enable the @UnicodeSyntax@
   language extension \[1\]. This extension enables Unicode characters
   to be used to stand for certain ASCII character sequences. For GHC
-  6.12.1 it provides the following alternatives:
+  6.12.3 it provides the following alternatives:
   .
   * &#x2237; (U+2237, PROPORTION) instead of @::@
   .

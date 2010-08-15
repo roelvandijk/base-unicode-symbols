@@ -7,7 +7,7 @@ License    : BSD3 (see the file LICENSE)
 Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 -}
 
-module Control.Arrow.Unicode ( (⋙), (⋘), (⧻), (⫴) ) where
+module Control.Arrow.Unicode ( (⋙), (⋘), (⁂), (⧻), (⫴) ) where
 
 
 -------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ module Control.Arrow.Unicode ( (⋙), (⋘), (⧻), (⫴) ) where
 -------------------------------------------------------------------------------
 
 -- from base:
-import Control.Arrow ( ArrowChoice, (+++), (|||) )
+import Control.Arrow ( Arrow, (***), ArrowChoice, (+++), (|||) )
 import Data.Either   ( Either )
 
 -- from base-unicode-symbols
@@ -26,6 +26,7 @@ import Control.Category.Unicode ( (⋙), (⋘) )
 -- Fixities
 -------------------------------------------------------------------------------
 
+infixr 3 ⁂
 infixr 2 ⧻
 infixr 2 ⫴
 
@@ -34,6 +35,13 @@ infixr 2 ⫴
 -- Symbols
 -------------------------------------------------------------------------------
 
+{-|
+(&#x2042;) = ('***')
+
+U+2042, ASTERISM
+-}
+(⁂) ∷ Arrow (⇝) ⇒ (α ⇝ β) → (α' ⇝ β') → (α, α') ⇝ (β, β')
+(⁂) = (***)
 
 {-|
 (&#x29FB;) = ('+++')
