@@ -1,11 +1,12 @@
 name:          base-unicode-symbols
-version:       0.2.1.1
+version:       0.2.1.2
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
+tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==7.0.1, GHC ==7.0.3
 author:        Roel van Dijk <vandijk.roel@gmail.com>
 maintainer:    Roel van Dijk <vandijk.roel@gmail.com>
-copyright:     (c) 2009–2010 Roel van Dijk <vandijk.roel@gmail.com>
+copyright:     2009–2011 Roel van Dijk <vandijk.roel@gmail.com>
 license:       BSD3
 license-file:  LICENSE
 category:
@@ -21,18 +22,9 @@ description:
   .
   For further Unicode goodness you can enable the @UnicodeSyntax@
   language extension \[1\]. This extension enables Unicode characters
-  to be used to stand for certain ASCII character sequences. For GHC
-  6.12.3 it provides the following alternatives:
-  .
-  * &#x2237; (U+2237, PROPORTION) instead of @::@
-  .
-  * &#x21D2; (U+21D2, RIGHTWARDS DOUBLE ARROW) instead of @=>@
-  .
-  * &#x2200; (U+2200, FOR ALL) instead of @forall@
-  .
-  * &#x2192; (U+2192, RIGHTWARDS ARROW) instead of @->@
-  .
-  * &#x2190; (U+2190, LEFTWARDS ARROW) instead of @<-@
+  to be used to stand for certain ASCII character sequences,
+  i.e. &#x2192; instead of @->@, &#x2200; instead of @forall@ and many
+  others.
   .
   Original idea by P&#xE9;ter Divi&#xE1;nszky.
   .
@@ -42,10 +34,18 @@ source-repository head
   type:     darcs
   location: http://code.haskell.org/~roelvandijk/code/base-unicode-symbols
 
+flag old-base
+  description: Support for base < 3.0.3.1
+  default: False
+
 library
+  if !flag(old-base)
+    build-depends: base >= 3.0 && < 4.4
+  else
+    build-depends: base >= 3.0.3.1 && < 4.4
+    exposed-modules: Control.Category.Unicode
   exposed-modules: Control.Applicative.Unicode
                  , Control.Arrow.Unicode
-                 , Control.Category.Unicode
                  , Control.Monad.Unicode
                  , Data.Bool.Unicode
                  , Data.Eq.Unicode
@@ -55,4 +55,4 @@ library
                  , Data.Monoid.Unicode
                  , Data.Ord.Unicode
                  , Prelude.Unicode
-  build-depends: base >= 3.0.3.1 && < 4.4
+
