@@ -3,7 +3,7 @@ version:       0.2.1.4
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
-tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==7.0.1, GHC ==7.0.3
+tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==6.12.1, GHC ==7.0.1, GHC ==7.0.3
 author:        Roel van Dijk <vandijk.roel@gmail.com>
 maintainer:    Roel van Dijk <vandijk.roel@gmail.com>
 copyright:     2009–2011 Roel van Dijk <vandijk.roel@gmail.com>
