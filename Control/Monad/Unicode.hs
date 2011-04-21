@@ -2,7 +2,7 @@
 
 {-|
 Module     : Control.Monad.Unicode
-Copyright  : (c) 2010 Roel van Dijk
+Copyright  : 2010—2011 Roel van Dijk
 License    : BSD3 (see the file LICENSE)
 Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 -}
