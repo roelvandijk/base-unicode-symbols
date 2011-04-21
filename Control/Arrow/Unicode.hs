@@ -26,7 +26,7 @@ module Control.Arrow.Unicode
 import Control.Arrow ( Arrow, (***), ArrowChoice, (+++), (|||) )
 import Data.Either   ( Either )
 
-#if MIN_VERSION_base(3,0,3)
+#if (MIN_VERSION_base(3,0,3))
 -- from base-unicode-symbols
 import Control.Category.Unicode ( (⋙), (⋘) )
 #else
@@ -43,7 +43,7 @@ infixr 3 ⁂
 #endif
 infixr 2 ⧻
 infixr 2 ⫴
-#if !MIN_VERSION_base(3,0,3)
+#if ! (MIN_VERSION_base(3,0,3))
 infixr 1 ⋙, ⋘
 #endif
 
@@ -78,7 +78,7 @@ U+2AF4, TRIPLE VERTICAL BAR BINARY RELATION
 (⫴) ∷ ArrowChoice (⇝) ⇒ (α ⇝ δ) → (β ⇝ δ) → (Either α β ⇝ δ)
 (⫴) = (|||)
 
-#if !MIN_VERSION_base(3,0,3)
+#if ! (MIN_VERSION_base(3,0,3))
 {-|
 (&#x22D9;) = ('>>>')
 
