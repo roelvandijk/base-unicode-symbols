@@ -1,9 +1,9 @@
 name:          base-unicode-symbols
-version:       0.2.1.4
+version:       0.2.1.5
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
-tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==6.12.1, GHC ==7.0.1, GHC ==7.0.3
+tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==6.12.1, GHC ==6.12.3, GHC ==7.0.1, GHC ==7.0.3
 author:        Roel van Dijk <vandijk.roel@gmail.com>
 maintainer:    Roel van Dijk <vandijk.roel@gmail.com>
 copyright:     2009–2011 Roel van Dijk <vandijk.roel@gmail.com>
@@ -31,8 +31,8 @@ description:
   \[1\] <http://www.haskell.org/ghc/docs/latest/html/users_guide/syntax-extns.html#unicode-syntax>
 
 source-repository head
-  type:     darcs
-  location: http://code.haskell.org/~roelvandijk/code/base-unicode-symbols
+  type:     git
+  location: git://github.com/roelvandijk/base-unicode-symbols.git
 
 flag old-base
   description: Support for base < 3.0.3.1
