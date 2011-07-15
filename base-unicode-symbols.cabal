@@ -1,5 +1,5 @@
 name:          base-unicode-symbols
-version:       0.2.1.5
+version:       0.2.1.6
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
@@ -13,8 +13,8 @@ category:
 homepage:      http://haskell.org/haskellwiki/Unicode-symbols
 synopsis:      Unicode alternatives for common functions and operators
 description:
-  This package defines new symbols for a number of functions and
-  operators in the base package.
+  This package defines new symbols for a number of functions,
+  operators and types in the base package.
   .
   All symbols are documented with their actual definition and
   information regarding their Unicode code point. They should be

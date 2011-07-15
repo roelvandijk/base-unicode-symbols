@@ -17,6 +17,7 @@ module Prelude.Unicode
     , (⧺)
     , (∈), (∉)
     , (⊥)
+    , ℤ, ℚ
     ) where
 
 
@@ -25,9 +26,10 @@ module Prelude.Unicode
 -------------------------------------------------------------------------------
 
 -- from base:
-import Prelude ( Num, Floating, Fractional
-               , (/), (*), pi, undefined
-               )
+import Data.Ratio ( Ratio )
+import Prelude    ( Num, Floating, Fractional, Integer
+                  , (/), (*), pi, undefined
+                  )
 
 -- from base-unicode-symbols:
 import Data.Bool.Unicode     ( (∧), (∨), (¬) )
@@ -80,3 +82,18 @@ U+22A5, UP TACK
 -}
 (⊥) ∷ α
 (⊥) = undefined
+
+
+-------------------------------------------------------------------------------
+-- Types
+-------------------------------------------------------------------------------
+
+{-|
+U+2124, DOUBLE-STRUCK CAPITAL Z
+-}
+type ℤ = Integer
+
+{-|
+U+2124, DOUBLE-STRUCK CAPITAL Q
+-}
+type ℚ = Ratio ℤ
