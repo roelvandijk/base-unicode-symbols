@@ -1,5 +1,5 @@
 name:          base-unicode-symbols
-version:       0.2.1.6
+version:       0.2.2
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
