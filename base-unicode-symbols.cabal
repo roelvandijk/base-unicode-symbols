@@ -1,16 +1,17 @@
 name:          base-unicode-symbols
-version:       0.2.2
+version:       0.2.2.1
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
 tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==6.12.1, GHC ==6.12.3, GHC ==7.0.1, GHC ==7.0.3
 author:        Roel van Dijk <vandijk.roel@gmail.com>
 maintainer:    Roel van Dijk <vandijk.roel@gmail.com>
-copyright:     2009–2011 Roel van Dijk <vandijk.roel@gmail.com>
+copyright:     2009—2011 Roel van Dijk <vandijk.roel@gmail.com>
 license:       BSD3
 license-file:  LICENSE
 category:
 homepage:      http://haskell.org/haskellwiki/Unicode-symbols
+bug-reports:   https://github.com/roelvandijk/base-unicode-symbols/issues
 synopsis:      Unicode alternatives for common functions and operators
 description:
   This package defines new symbols for a number of functions,
@@ -29,6 +30,8 @@ description:
   Original idea by P&#xE9;ter Divi&#xE1;nszky.
   .
   \[1\] <http://www.haskell.org/ghc/docs/latest/html/users_guide/syntax-extns.html#unicode-syntax>
+
+extra-source-files: LICENSE, README.markdown
 
 source-repository head
   type:     git
