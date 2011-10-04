@@ -37,6 +37,7 @@ U+00AC, NOT SIGN
 -}
 (¬) ∷ Bool → Bool
 (¬) = not
+{-# INLINE (¬) #-}
 
 {-|
 (&#x2227;) = ('&&')
@@ -45,6 +46,7 @@ U+2227, LOGICAL AND
 -}
 (∧) ∷ Bool → Bool → Bool
 (∧) = (&&)
+{-# INLINE (∧) #-}
 
 {-|
 (&#x2228;) = ('||')
@@ -53,3 +55,4 @@ U+2228, LOGICAL OR
 -}
 (∨) ∷ Bool → Bool → Bool
 (∨) = (||)
+{-# INLINE (∨) #-}

@@ -36,6 +36,7 @@ U+2205, EMPTY SET
 -}
 (∅) ∷ Monoid α ⇒ α
 (∅) = mempty
+{-# INLINE (∅) #-}
 
 {-|
 (&#x2295;) = 'mappend'
@@ -44,4 +45,4 @@ U+2295, CIRCLED PLUS
 -}
 (⊕) ∷ Monoid α ⇒ α → α → α
 (⊕) = mappend
-
+{-# INLINE (⊕) #-}

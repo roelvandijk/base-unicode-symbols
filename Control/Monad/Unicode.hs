@@ -38,6 +38,7 @@ infixr 1 =≪
 -}
 (≫=) ∷ Monad m ⇒ m α → (α → m β) → m β
 (≫=) = (>>=)
+{-# INLINE (≫=) #-}
 
 {-|
 (&#x226B;) = ('>>')
@@ -46,6 +47,7 @@ U+226B, MUCH GREATER-THAN
 -}
 (≫) ∷ Monad m ⇒ m α → m β → m β
 (≫) = (>>)
+{-# INLINE (≫) #-}
 
 {-|
 (=&#x226A;) = ('=<<')
@@ -54,3 +56,4 @@ U+226B, MUCH GREATER-THAN
 -}
 (=≪) ∷ Monad m ⇒ (α → m β) → m α → m β
 (=≪) = (=<<)
+{-# INLINE (=≪) #-}
