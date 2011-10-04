@@ -36,6 +36,7 @@ U+229B, CIRCLED ASTERISK OPERATOR
 -}
 (⊛) ∷ Applicative f ⇒ f (α → β) → f α → f β
 (⊛) = (<*>)
+{-# INLINE (⊛) #-}
 
 {-|
 (&#x2205;) = 'empty'
@@ -44,3 +45,4 @@ U+2205, EMPTY SET
 -}
 (∅) ∷ Alternative f ⇒ f α
 (∅) = empty
+{-# INLINE (∅) #-}
