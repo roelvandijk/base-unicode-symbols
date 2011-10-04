@@ -60,6 +60,7 @@ U+2042, ASTERISM
 -}
 (⁂) ∷ Arrow (⇝) ⇒ (α ⇝ β) → (α' ⇝ β') → (α, α') ⇝ (β, β')
 (⁂) = (***)
+{-# INLINE (⁂) #-}
 #endif
 
 {-|
@@ -69,6 +70,7 @@ U+29FB, TRIPLE PLUS
 -}
 (⧻) ∷ ArrowChoice (⇝) ⇒ (α ⇝ β) → (α' ⇝ β') → (Either α α' ⇝ Either β β')
 (⧻) = (+++)
+{-# INLINE (⧻) #-}
 
 {-|
 (&#x2AF4;) = ('|||')
@@ -77,6 +79,7 @@ U+2AF4, TRIPLE VERTICAL BAR BINARY RELATION
 -}
 (⫴) ∷ ArrowChoice (⇝) ⇒ (α ⇝ δ) → (β ⇝ δ) → (Either α β ⇝ δ)
 (⫴) = (|||)
+{-# INLINE (⫴) #-}
 
 #if ! (MIN_VERSION_base(3,0,3))
 {-|
@@ -86,6 +89,7 @@ U+22D9, VERY MUCH GREATER-THAN
 -}
 (⋙) ∷ Arrow (⇝) ⇒ (α ⇝ β) → (β ⇝ γ) → (α ⇝ γ)
 (⋙) = (>>>)
+{-# INLINE (⋙) #-}
 
 {-|
 (&#x22D8;) = ('<<<')
@@ -94,4 +98,5 @@ U+22D8, VERY MUCH LESS-THAN
 -}
 (⋘) ∷ Arrow (⇝) ⇒ (β ⇝ γ) → (α ⇝ β) → (α ⇝ γ)
 (⋘) = (<<<)
+{-# INLINE (⋘) #-}
 #endif
