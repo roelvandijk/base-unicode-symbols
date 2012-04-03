@@ -58,7 +58,7 @@ infixr 1 ⋙, ⋘
 
 U+2042, ASTERISM
 -}
-(⁂) ∷ Arrow (⇝) ⇒ (α ⇝ β) → (α' ⇝ β') → (α, α') ⇝ (β, β')
+(⁂) ∷ Arrow a ⇒ a α β → a α' β' → a (α, α') (β, β')
 (⁂) = (***)
 {-# INLINE (⁂) #-}
 #endif
@@ -68,7 +68,7 @@ U+2042, ASTERISM
 
 U+29FB, TRIPLE PLUS
 -}
-(⧻) ∷ ArrowChoice (⇝) ⇒ (α ⇝ β) → (α' ⇝ β') → (Either α α' ⇝ Either β β')
+(⧻) ∷ ArrowChoice a ⇒ a α β → a α' β' → a (Either α α') (Either β β')
 (⧻) = (+++)
 {-# INLINE (⧻) #-}
 
@@ -77,7 +77,7 @@ U+29FB, TRIPLE PLUS
 
 U+2AF4, TRIPLE VERTICAL BAR BINARY RELATION
 -}
-(⫴) ∷ ArrowChoice (⇝) ⇒ (α ⇝ δ) → (β ⇝ δ) → (Either α β ⇝ δ)
+(⫴) ∷ ArrowChoice a ⇒ a α δ → a β δ → a (Either α β) δ
 (⫴) = (|||)
 {-# INLINE (⫴) #-}
 
@@ -87,7 +87,7 @@ U+2AF4, TRIPLE VERTICAL BAR BINARY RELATION
 
 U+22D9, VERY MUCH GREATER-THAN
 -}
-(⋙) ∷ Arrow (⇝) ⇒ (α ⇝ β) → (β ⇝ γ) → (α ⇝ γ)
+(⋙) ∷ Arrow a ⇒ a α β → a β γ → a α γ
 (⋙) = (>>>)
 {-# INLINE (⋙) #-}
 
@@ -96,7 +96,7 @@ U+22D9, VERY MUCH GREATER-THAN
 
 U+22D8, VERY MUCH LESS-THAN
 -}
-(⋘) ∷ Arrow (⇝) ⇒ (β ⇝ γ) → (α ⇝ β) → (α ⇝ γ)
+(⋘) ∷ Arrow a ⇒ a β γ → a α β → a α γ
 (⋘) = (<<<)
 {-# INLINE (⋘) #-}
 #endif
