@@ -16,6 +16,7 @@ module Prelude.Unicode
     , (∘)
     , (⧺)
     , (∈), (∉)
+    , (‼)
     , (⊥)
     , ℤ, ℚ
     ) where
@@ -35,7 +36,7 @@ import Prelude    ( Num, Floating, Fractional, Integer
 import Data.Bool.Unicode     ( (∧), (∨), (¬) )
 import Data.Eq.Unicode       ( (≡), (≢), (≠) )
 import Data.Function.Unicode ( (∘) )
-import Data.List.Unicode     ( (⧺), (∈), (∉) )
+import Data.List.Unicode     ( (⧺), (∈), (∉), (‼) )
 import Data.Ord.Unicode      ( (≤), (≥), (≮), (≯) )
 
 
