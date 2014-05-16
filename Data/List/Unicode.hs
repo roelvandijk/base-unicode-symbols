@@ -11,6 +11,7 @@ module Data.List.Unicode
     ( (⧺)
     , (∈), (∋), (∉), (∌)
     , (∪), (∖), (∆), (∩)
+    , (‼)
     ) where
 
 
@@ -19,10 +20,11 @@ module Data.List.Unicode
 -------------------------------------------------------------------------------
 
 -- from base:
+import Prelude       ( Int )
 import Data.Bool     ( Bool )
 import Data.Eq       ( Eq )
 import Data.Function ( flip )
-import Data.List     ( (++), elem, notElem, union, (\\), intersect )
+import Data.List     ( (++), elem, notElem, union, (\\), intersect, (!!) )
 
 
 -------------------------------------------------------------------------------
@@ -38,6 +40,7 @@ infixl 6 ∪
 infixr 6 ∩
 infixl 9 ∖
 infixl 9 ∆
+infixl 9 ‼
 
 
 -------------------------------------------------------------------------------
@@ -126,3 +129,12 @@ U+2229, INTERSECTION
 (∩) ∷ Eq α ⇒ [α] → [α] → [α]
 (∩) = intersect
 {-# INLINE (∩) #-}
+
+{-|
+(&#x203C;) = ('!!')
+
+U+203C, DOUBLE EXCLAMATION MARK
+-}
+(‼) ∷ [α] → Int → α
+(‼) = (!!)
+{-# INLINE (‼) #-}
