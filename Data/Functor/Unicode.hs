@@ -30,7 +30,7 @@ infixl 4 §
 {-|
 (&#xA7;) = ('<$>')
 
-U+A7, SECTION SYMBOL
+U+00A7, SECTION SYMBOL
 -}
 (§) ∷ Functor f ⇒ (α → β) → f α → f β
 (§) = (<$>)
