@@ -18,6 +18,7 @@ module Prelude.Unicode
     , (∈), (∉)
     , (‼)
     , (⊥)
+    , (∣), (∤)
     , ℤ, ℚ
     ) where
 
@@ -27,9 +28,11 @@ module Prelude.Unicode
 -------------------------------------------------------------------------------
 
 -- from base:
+import Data.Bool ( Bool )
+import Data.Eq ( (==) )
 import Data.Ratio ( Ratio )
-import Prelude    ( Num, Floating, Fractional, Integer
-                  , (/), (*), pi, undefined
+import Prelude    ( Num, Floating, Fractional, Integer, Integral
+                  , (/), (*), pi, undefined, mod
                   )
 
 -- from base-unicode-symbols:
@@ -46,6 +49,8 @@ import Data.Ord.Unicode      ( (≤), (≥), (≮), (≯) )
 
 infixl 7 ÷
 infixl 7 ⋅
+infix 4 ∣
+infix 4 ∤
 
 
 -------------------------------------------------------------------------------
@@ -87,6 +92,24 @@ U+22A5, UP TACK
 (⊥) ∷ α
 (⊥) = undefined
 {-# INLINE (⊥) #-}
+
+{-|
+a &#x2223; b = mod a b == 0
+
+U+2223, DIVIDES
+-}
+(∣) ∷ Integral a ⇒ a → a → Bool
+a ∣ b = mod a b == 0
+{-# INLINE (∣) #-}
+
+{-|
+a &#x2224; b = not (a &#x2223; b)
+
+U+2224, DOES NOT DIVIDE
+-}
+(∤) ∷ Integral a ⇒ a → a → Bool
+a ∤ b = (¬)(a ∣ b)
+{-# INLINE (∤) #-}
 
 
 -------------------------------------------------------------------------------
