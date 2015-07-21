@@ -57,5 +57,5 @@ library
                  , Data.List.Unicode
                  , Data.Monoid.Unicode
                  , Data.Ord.Unicode
+                 , Data.String.Unicode
                  , Prelude.Unicode
-

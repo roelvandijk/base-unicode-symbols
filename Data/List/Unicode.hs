@@ -12,6 +12,7 @@ module Data.List.Unicode
     , (∈), (∋), (∉), (∌)
     , (∪), (∖), (∆), (∩)
     , (‼)
+    , 𝜀
     ) where
 
 
@@ -138,3 +139,13 @@ U+203C, DOUBLE EXCLAMATION MARK
 (‼) ∷ [α] → Int → α
 (‼) = (!!)
 {-# INLINE (‼) #-}
+
+{-|
+Epsilon, the empty word (or list)
+
+(&#x3b5;) = []
+
+U+3B5, GREEK SMALL LETTER EPSILON
+-}
+𝜀 ∷ [a]
+𝜀 = []
