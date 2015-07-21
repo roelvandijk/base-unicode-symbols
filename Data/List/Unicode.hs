@@ -145,7 +145,7 @@ Epsilon, the empty word (or list)
 
 (&#x3b5;) = []
 
-U+3B5, GREEK SMALL LETTER EPSILON
+(U+3B5, GREEK SMALL LETTER EPSILON)
 -}
 𝜀 ∷ [a]
 𝜀 = []
