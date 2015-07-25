@@ -20,6 +20,7 @@ module Prelude.Unicode
     , (⊥)
     , (∣), (∤)
     , ℤ, ℚ
+    , 𝜀
     ) where
 
 
@@ -39,7 +40,7 @@ import Prelude    ( Num, Floating, Fractional, Integer, Integral
 import Data.Bool.Unicode     ( (∧), (∨), (¬) )
 import Data.Eq.Unicode       ( (≡), (≢), (≠) )
 import Data.Function.Unicode ( (∘) )
-import Data.List.Unicode     ( (⧺), (∈), (∉), (‼) )
+import Data.List.Unicode     ( (⧺), (∈), (∉), (‼), 𝜀 )
 import Data.Ord.Unicode      ( (≤), (≥), (≮), (≯) )
 
 
