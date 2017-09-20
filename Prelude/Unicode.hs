@@ -34,7 +34,7 @@ import Data.Bool ( Bool )
 import Data.Eq ( (==) )
 import Data.Ratio ( Ratio )
 import Prelude    ( Num, Floating, Fractional, Integer, Integral
-                  , (/), (*), pi, undefined, mod
+                  , (-), (/), (*), pi, undefined, mod
                   )
 
 -- from base-unicode-symbols:
