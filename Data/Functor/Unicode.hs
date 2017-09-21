@@ -1,13 +1,13 @@
 {-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
 
 {-|
-Module     : Control.Applicative.Unicode
-Copyright  : 2009–2011 Roel van Dijk
+Module     : Data.Functor.Unicode
+Copyright  : 2014 Brian Chen
 License    : BSD3 (see the file LICENSE)
 Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 -}
 
-module Control.Applicative.Unicode ( (⊛), (∅), (§) ) where
+module Data.Functor.Unicode ( (§) ) where
 
 
 -------------------------------------------------------------------------------
@@ -15,35 +15,23 @@ module Control.Applicative.Unicode ( (⊛), (∅), (§) ) where
 -------------------------------------------------------------------------------
 
 -- from base:
-import Control.Applicative ( Applicative, Alternative, (<*>), empty )
-import Data.Functor.Unicode ( (§) )
-
+import Data.Functor ( Functor, (<$>) )
 
 -------------------------------------------------------------------------------
 -- Fixities
 -------------------------------------------------------------------------------
 
-infixl 4 ⊛
-
+infixl 4 §
 
 -------------------------------------------------------------------------------
 -- Symbols
 -------------------------------------------------------------------------------
 
 {-|
-(&#x229B;) = '<*>'
+(&#xA7;) = ('<$>')
 
-U+229B, CIRCLED ASTERISK OPERATOR
+U+00A7, SECTION SYMBOL
 -}
-(⊛) ∷ Applicative f ⇒ f (α → β) → f α → f β
-(⊛) = (<*>)
-{-# INLINE (⊛) #-}
-
-{-|
-(&#x2205;) = 'empty'
-
-U+2205, EMPTY SET
--}
-(∅) ∷ Alternative f ⇒ f α
-(∅) = empty
-{-# INLINE (∅) #-}
+(§) ∷ Functor f ⇒ (α → β) → f α → f β
+(§) = (<$>)
+{-# INLINE (§) #-}
