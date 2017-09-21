@@ -11,6 +11,7 @@ module Prelude.Unicode
     ( (¬), (∧), (∨)
     , (≡), (≢), (≠)
     , (≤), (≥), (≮), (≯)
+    , (−)
     , π
     , (÷), (⋅)
     , (∘)
@@ -33,7 +34,7 @@ import Data.Bool ( Bool )
 import Data.Eq ( (==) )
 import Data.Ratio ( Ratio )
 import Prelude    ( Num, Floating, Fractional, Integer, Integral
-                  , (/), (*), pi, undefined, mod
+                  , (-), (/), (*), pi, undefined, mod
                   )
 
 -- from base-unicode-symbols:
@@ -112,6 +113,14 @@ U+2224, DOES NOT DIVIDE
 a ∤ b = (¬)(a ∣ b)
 {-# INLINE (∤) #-}
 
+{-|
+a &#x2212; b = a - b
+
+U+2212, MINUS SIGN
+-}
+(−) ∷ Num a ⇒ a → a → a
+(−) = (-)
+{-# INLINE (−) #-}
 
 -------------------------------------------------------------------------------
 -- Types
