@@ -7,7 +7,7 @@ License    : BSD3 (see the file LICENSE)
 Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
 -}
 
-module Control.Monad.Unicode ( (≫=), (≫), (=≪), (↣), (↢) ) where
+module Control.Monad.Unicode ( (≫=), (≫), (=≪), (↣), (↢), (⪼), (⪻) ) where
 
 
 -------------------------------------------------------------------------------
@@ -28,6 +28,8 @@ infixr 1 =≪
 infixl 1 ↣
 infixr 1 ↢
 
+infixl 1 ⪼
+infixr 1 ⪻
 
 
 -------------------------------------------------------------------------------
@@ -78,3 +80,24 @@ U+226B, MUCH GREATER-THAN
 (↢) ∷ Monad μ ⇒ (β → μ γ) → (α → μ β) → α → μ γ
 (↢) = (<=<)
 {-# INLINE (↢) #-}
+
+
+{-|
+(&#x2abc;) = ('>>=')
+
+(U+2ABC, DOUBLE SUCCEEDS
+-}
+(⪼) ∷ Monad μ ⇒ μ α → (α → μ β) → μ β
+(⪼) = (>>=)
+{-# INLINE (⪼) #-}
+
+
+{-|
+(&#x2abb;) = ('=<<')
+
+(U+2ABB, DOUBLE PRECEDES
+-}
+(⪻) ∷ Monad μ ⇒ (α → μ β) → μ α → μ β
+(⪻) = (=<<)
+{-# INLINE (⪻) #-}
+
