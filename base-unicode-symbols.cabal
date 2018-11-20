@@ -41,12 +41,20 @@ flag old-base
   description: Support for base < 3.0.3.1
   default: False
 
+flag base-4-8
+  description: Support features of base >= 4.8.0.0
+  default: True
+
 library
   if flag(old-base)
     build-depends: base >= 3.0 && < 3.0.3.1
   else
-    build-depends: base >= 3.0.3.1 && < 5
     exposed-modules: Control.Category.Unicode
+    if flag(base-4-8)
+      build-depends: base >= 4.8.0.0 && < 5
+      exposed-modules: Numeric.Natural.Unicode
+    else
+      build-depends: base >= 3.0.3.1 && < 5
   exposed-modules: Control.Applicative.Unicode
                  , Control.Arrow.Unicode
                  , Control.Monad.Unicode
