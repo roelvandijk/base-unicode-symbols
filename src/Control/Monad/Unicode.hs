@@ -1,14 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
 
-{-|
-Module     : Control.Monad.Unicode
-Copyright  : 2010—2011 Roel van Dijk
-License    : BSD3 (see the file LICENSE)
-Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
--}
-
 module Control.Monad.Unicode ( (≫=), (≫), (=≪), (↣), (↢) ) where
-
 
 -------------------------------------------------------------------------------
 -- Imports

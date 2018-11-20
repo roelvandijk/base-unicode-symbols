@@ -1,14 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
 
-{-|
-Module     : Control.Applicative.Unicode
-Copyright  : 2009–2011 Roel van Dijk
-License    : BSD3 (see the file LICENSE)
-Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
--}
-
 module Control.Applicative.Unicode ( (⊛), (∅) ) where
-
 
 -------------------------------------------------------------------------------
 -- Imports
