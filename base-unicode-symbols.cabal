@@ -1,12 +1,12 @@
 name:          base-unicode-symbols
-version:       0.2.2.5
+version:       0.2.3
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
-tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==6.12.1, GHC ==6.12.3, GHC ==7.0.1, GHC ==7.0.3, GHC ==7.2.1, GHC ==8.4.3
+tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==6.12.1, GHC ==6.12.3, GHC ==7.0.1, GHC ==7.0.3, GHC ==7.2.1, GHC==8.2.2
 author:        Roel van Dijk <vandijk.roel@gmail.com>
 maintainer:    Roel van Dijk <vandijk.roel@gmail.com>
-copyright:     2009–2011 Roel van Dijk <vandijk.roel@gmail.com>
+copyright:     2009–2018 Roel van Dijk <vandijk.roel@gmail.com>
 license:       BSD3
 license-file:  LICENSE
 category:
@@ -22,14 +22,14 @@ description:
   completely interchangeable with their definitions.
   .
   For further Unicode goodness you can enable the @UnicodeSyntax@
-  language extension \[1\]. This extension enables Unicode characters
+  language extension [1]. This extension enables Unicode characters
   to be used to stand for certain ASCII character sequences,
   i.e. &#x2192; instead of @->@, &#x2200; instead of @forall@ and many
   others.
   .
   Original idea by P&#xE9;ter Divi&#xE1;nszky.
   .
-  \[1\] <http://www.haskell.org/ghc/docs/latest/html/users_guide/syntax-extns.html#unicode-syntax>
+  \[1] <https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unicode-syntax>
 
 extra-source-files: LICENSE, README.markdown
 
@@ -41,12 +41,23 @@ flag old-base
   description: Support for base < 3.0.3.1
   default: False
 
+flag base-4-8
+  description: Support features of base >= 4.8.0.0
+  default: True
+
 library
+  hs-source-dirs: src
+  ghc-options: -Wall
+
   if flag(old-base)
     build-depends: base >= 3.0 && < 3.0.3.1
   else
-    build-depends: base >= 3.0.3.1 && < 5
     exposed-modules: Control.Category.Unicode
+    if flag(base-4-8)
+      build-depends: base >= 4.8.0.0 && < 5
+      exposed-modules: Numeric.Natural.Unicode
+    else
+      build-depends: base >= 3.0.3.1 && < 5
   exposed-modules: Control.Applicative.Unicode
                  , Control.Arrow.Unicode
                  , Control.Monad.Unicode

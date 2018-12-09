@@ -1,14 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
 
-{-|
-Module     : Data.Function.Unicode
-Copyright  : 2009–2011 Roel van Dijk
-License    : BSD3 (see the file LICENSE)
-Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
--}
-
 module Data.Function.Unicode ( (∘) ) where
-
 
 -------------------------------------------------------------------------------
 -- Imports

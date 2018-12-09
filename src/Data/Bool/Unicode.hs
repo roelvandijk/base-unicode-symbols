@@ -1,14 +1,6 @@
 {-# LANGUAGE NoImplicitPrelude, UnicodeSyntax #-}
 
-{-|
-Module     : Data.Bool.Unicode
-Copyright  : 2009–2011 Roel van Dijk
-License    : BSD3 (see the file LICENSE)
-Maintainer : Roel van Dijk <vandijk.roel@gmail.com>
--}
-
 module Data.Bool.Unicode ( (∧), (∨), (¬), (⊻), (⊼), (⊽) ) where
-
 
 -------------------------------------------------------------------------------
 -- Imports
@@ -16,7 +8,6 @@ module Data.Bool.Unicode ( (∧), (∨), (¬), (⊻), (⊼), (⊽) ) where
 
 -- from base:
 import Data.Bool ( Bool, (&&), (||), not )
-import Data.Function ( (.) )
 
 -------------------------------------------------------------------------------
 -- Fixities
