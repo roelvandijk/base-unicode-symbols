@@ -43,6 +43,7 @@ import Data.Ord.Unicode      ( (≤), (≥), (≮), (≯) )
 
 infixl 7 ÷
 infixl 7 ×, ⋅
+infixl 6 −
 infix 4 ∣
 infix 4 ∤
 
