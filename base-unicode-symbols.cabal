@@ -1,12 +1,11 @@
 name:          base-unicode-symbols
-version:       0.2.3
+version:       0.2.4
 cabal-version: >=1.6
 build-type:    Simple
 stability:     provisional
-tested-with:   GHC ==6.8.1, GHC ==6.10.1, GHC ==6.12.1, GHC ==6.12.3, GHC ==7.0.1, GHC ==7.0.3, GHC ==7.2.1, GHC==8.2.2
-author:        Roel van Dijk <vandijk.roel@gmail.com>
-maintainer:    Roel van Dijk <vandijk.roel@gmail.com>
-copyright:     2009–2018 Roel van Dijk <vandijk.roel@gmail.com>
+author:        Roel van Dijk <roel@lambdacube.nl>
+maintainer:    Roel van Dijk <roel@lambdacube.nl>
+copyright:     2009–2019 Roel van Dijk <roel@lambdacube.nl>
 license:       BSD3
 license-file:  LICENSE
 category:
