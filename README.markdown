@@ -13,7 +13,7 @@ their definitions.
 This library only provides Unicode aliases for *library* functions.
 If you want to use Unicode symbols for core language tokens, also
 enable the
-[`UnicodeSyntax`](https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/glasgow_exts.html#unicode-syntax)
+[`UnicodeSyntax`](https://downloads.haskell.org/ghc/latest/docs/html/users_guide/exts/unicode_syntax.html)
 language extension. This extension enables Unicode characters to be
 used to stand for certain ASCII character sequences, i.e. `→` instead
 of `->`, `∀` instead of `forall` and many others.
